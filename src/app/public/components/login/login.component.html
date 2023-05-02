@@ -1,0 +1,80 @@
+
+
+<!--
+  <div>
+  <--<a [routerLink]="['../register']">Go to Register</a>
+  <img style="padding-bottom: 10%;padding-left: 35%;" src="assets/cr.png">
+  <mat-card style="padding-left:10px;padding-bottom: 50%;">
+    
+   
+    <img style="padding-left: 45%;padding-bottom: 10%;" src="assets/icons8-account-96.png">
+    <mat-card-content >
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+        <!--<mat-form-field>
+          <input type="email" matInput placeholder="Email" formControlName="email">
+          -- Here we can display error messages/hints for the user, if one of the Validators adds an error to the email 
+           with the .touched check we only display the hints if the input was touched by the users --
+          <mat-error *ngIf="this.loginForm.get('email')?.touched && this.loginForm.get('email')?.hasError('required')">
+            Email is required</mat-error>
+          <mat-error *ngIf="this.loginForm.get('email')?.touched && this.loginForm.get('email')?.hasError('email')">
+            Email must be a valid Email</mat-error>
+        </mat-form-field>-->
+
+        <!--<mat-form-field>
+          <input type="password" matInput placeholder="Password" formControlName="password">
+          <mat-error
+            *ngIf="this.loginForm.get('password')?.touched && this.loginForm.get('password')?.hasError('required')">
+            Password is required</mat-error>
+        </mat-form-field>
+
+        <div class="button">
+          <!-- Button is disabled(not clickable), if our LoginForm contains Validation Errors 
+          <img style="padding-left: 5%; padding-bottom: 5%;" src="assets/icons8-google-48.png">
+          <button type="submit" mat-button >  Sign in with Google</button> </div>
+          <div>
+          <button  type="submit" mat-button > <a style="padding-left: 25%;" [routerLink]="['../register']">Je n'ai pas de compte google </a></button>
+    
+          </div>
+          
+
+       
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>-->
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="assets/WhatsApp Image 2023-05-02 à 00.33.02.jpg"
+          class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+         
+
+          
+
+         
+
+          
+          <img style="padding-bottom: 0%;padding-left: 5%;" src="assets/cr.png">
+          
+
+          <div class="text-center text-lg-start mt-4 pt-2"><span>
+            <img  src="assets/icons8-google-48.png"> </span>
+            <button type="submit" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">
+              Sign in with Google</button>
+            <p class="small fw-bold mt-2 pt-1 mb-0"  style="padding-left: 3.5rem">Don't have an account? <a 
+                class="link-danger" [routerLink]="['../register']">Register</a></p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  
+</section>
